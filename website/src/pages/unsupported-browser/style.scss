@@ -1,0 +1,27 @@
+table.browserlist {
+	margin-bottom: 1rem;
+
+	td {
+		&:nth-child(1) {
+			width: 12.5rem
+		}
+
+		&:nth-child(2) {
+			width: 5rem
+		}
+
+		&:nth-child(3) {
+			width: 10rem
+		}
+	}
+}
+
+.systemrequirements {
+	.iconify {
+		margin-left: 6px;
+
+		&:first-of-type {
+			margin-left: 16px;
+		}
+	}
+}

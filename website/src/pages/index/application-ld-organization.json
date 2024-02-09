@@ -1,0 +1,7 @@
+{
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"url": "https://scratchaddons.com",
+	"logo": "https://scratchaddons.com/assets/img/icon.svg",
+	"name": "Scratch Addons"
+}

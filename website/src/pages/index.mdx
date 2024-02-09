@@ -1,0 +1,238 @@
+---
+name: Home
+---
+
+import "./index/style.scss";
+import "./index/script";
+import ApplicationMdApplication from "!!raw-loader!./index/application-ld-application.json";
+import ApplicationMdOrganization from "!!raw-loader!./index/application-ld-organization.json";
+import info from "@site/../common/info";
+import InstallButton from "./index/InstallButton";
+import AddonCard from "./index/AddonCard";
+import "@splidejs/react-splide/css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import Divider1 from "./index/Divider1.svg";
+import Divider2 from "./index/Divider2.svg";
+import Odometer from "react-odometerjs";
+// import "odometer/themes/odometer-theme-default.sass";
+
+<section id="intro" class="px-4 pb-0 mb-0 intro-heading text-left">
+	<div class="container pt-4 px-3 pb-0 d-flex flex-column justify-content-center text-center" id="intro-info">
+		<h1 class="display-4 m-0 mb-3 p-0">
+			All-in-one browser extension for Scratch
+		</h1>
+		<p class="lead mb-4">
+			Scratch Addons combines new and existing features and themes for the Scratch website and project editor into one easy-to-access and configurable browser extension.
+		</p>
+		<div id="intro-buttons" class="d-flex align-items-center flex-column flex-md-row justify-content-center">
+			<a id="install-intro" class="btn btn-white btn-lg install-btn disabled">
+				<p>
+					<span id="install-browser-icon">
+						<span class="iconify-inline" data-icon="fa-solid:hourglass-start"></span>
+					</span>
+					<span id="install-browser">Install for Chrome</span>
+				</p>
+				<p>free, open source</p>
+			</a>
+			<a href="#features" class="btn" id="read-more">or read more</a>
+		</div>
+		<img src="./index/intro-hero.svg" alt='{{ T "IndexPage.Intro.HeroCaption" }}' class="w-100 pt-4" />
+	</div>
+</section>
+
+<Divider1 />
+
+<section id="features" class="container text-center py-4">
+	<h2>Features</h2>
+	<div class="row text-left">
+		<div class="col-12 col-lg-6">
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="fa-solid:list"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>Addons</h3>
+					<p>Scratch Addons consists of addons, which are features that can empower your Scratch website and editor experience.</p>
+				</div>
+			</div>
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="vaadin:cog"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>Customizable</h3>
+					<p>Scratch Addons has an easy-to-use interface to control various settings of each feature and theme.</p>
+				</div>
+			</div>
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="fluent:local-language-24-filled"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>International</h3>
+					<p>Not just English. Scratch Addons is available in Spanish, Russian, Japanese, French, and many more.</p>
+				</div>
+			</div>
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="el:opensource"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>Open source</h3>
+					<p>Scratch Addons is free, open source, and built by a community of Scratchers.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-lg-6" id="intro-img">
+			<Splide
+				hasTrack={true}
+				options={{
+					type: "loop",
+					perMove: 1,
+					start: 1,
+					autoPlay: "pause",
+					intersection: {
+						inView: { autoPlay: true },
+						outView: { autoPlay: false },
+					},
+					interval: 4000,
+					pauseOnHover: true,
+				}}>
+				{/*{ partial "youtube" (dict "id" "nQ4N9zlzj0M") }*/}
+				<SplideSlide>
+					<img
+						src="./index/showcase/popup-light.png"
+						alt="IndexPage.Intro.Carousel.Popup.Caption" />
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="./index/showcase/popup-dark.png"
+						alt="IndexPage.Intro.Carousel.Popup.Caption" />
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="./index/showcase/settings-light.png"
+						alt="IndexPage.Intro.Carousel.Settings.Caption" />
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="./index/showcase/settings-dark.png"
+						alt="IndexPage.Intro.Carousel.Settings.Caption" />
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="./index/showcase/demo-1.png"
+						alt="IndexPage.Intro.Carousel.Demo.Caption" />
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="./index/showcase/demo-2.png"
+						alt="IndexPage.Intro.Carousel.Demo.Caption" />
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="./index/showcase/demo-3.png"
+						alt="IndexPage.Intro.Carousel.Demo.Caption" />
+				</SplideSlide>
+				<SplideSlide>
+					<img
+						src="./index/showcase/demo-4.png"
+						alt="IndexPage.Intro.Carousel.Demo.Caption" />
+				</SplideSlide>
+			</Splide>
+		</div>
+	</div>
+</section>
+
+<Divider2 />
+
+<section id="highlights" class="py-4">
+	<h2 class="text-center">Highlights</h2>
+	<p class="text-center mb-3">
+		Remember, these are just the highlights.
+		<a href="/addons" class="white-underline">There's more!</a>
+	</p>
+
+	<Splide
+		hasTrack={true}
+		options={{
+			type: "loop",
+			perPage: 5,
+			perMove: 1,
+			gap: "0.5rem",
+			breakpoints: {
+				1399.98: { perPage: 4, },
+				1199.98: { perPage: 3, },
+				767.98: { perPage: 2, },
+				575.98: { perPage: 1, },
+			},
+		}}>
+		<SplideSlide>
+			<img src="image1.jpg" alt="Image 1"/>
+		</SplideSlide>
+		<SplideSlide>
+			<img src="image2.jpg" alt="Image 2"/>
+		</SplideSlide>
+	</Splide>
+
+	<div class="splide" id="highlights-carousel">
+		<div class="splide__track">
+			<ul class="splide__list align-items-start">
+
+			{/* {{- if ( index $.Site.Data.addons $.Page.Language.Lang ) }}
+				{{- template "addon-card" ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
+			{{ else }}
+				{{- template "addon-card" $.Site.Data.addons.en -}}
+			{{ end -}} */}
+
+			</ul>
+		</div>
+		{/* <a class="carousel-control-prev" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">{{ T "IndexPage.Intro.Carousel.Previous" }}</span>
+		</a>
+		<a class="carousel-control-next" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">{{ T "IndexPage.Intro.Carousel.Next" }}</span>
+		</a> */}
+	</div>
+</section>
+
+<Divider1 />
+
+<section id="install" class="container text-center py-4">
+	<div class="row">
+		<div class="col-12 col-lg"></div>
+		<div class="col-12 col-lg-auto mb-4 mb-lg-0 mr-lg-3">
+			<h2>Install</h2>
+			<p>Ready to power up Scratch? Get it now!</p>
+			<p>
+				<InstallButton link={info.extension.store.chrome.link} icon="simple-icons:googlechrome" title="Chrome" />
+				<InstallButton link={info.extension.store.firefox.link} icon="simple-icons:firefoxbrowser" title="Firefox" />
+				<InstallButton link={info.extension.store.edge.link} icon="simple-icons:microsoftedge" title="Edge" />
+			</p>
+			<p>
+				...or <a href="https://github.com/ScratchAddons/ScratchAddons/releases" target="_blank" rel="noopener">download it from GitHub</a>
+				or <a href="/docs/getting-started/installing#from-source" target="_blank" rel="noopener">install it from the source</a>.
+			</p>
+		</div>
+		<div class="col-12 col-lg-auto ml-lg-3 d-flex flex-column justify-content-center">
+			<p id="total-users" class="odometer mb-0">
+				<Odometer value={info.extension.users} format="d" />
+			</p>
+			<p id="total-users2">Users</p>
+		</div>
+		<div class="col-12 col-lg"></div>
+	</div>
+</section>
+
+<script type="application/ld+json">{ApplicationMdApplication}</script>
+<script type="application/ld+json">{ApplicationMdOrganization}</script>

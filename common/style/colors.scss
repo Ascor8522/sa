@@ -1,0 +1,77 @@
+@import "./bs-colors";
+
+$scratch-orange: #ff7b26;
+
+$bs-default-black: #212529;
+
+$bs-blue: $blue-500; // var(--blue);
+$bs-indigo: $indigo-500; // var(--indigo);
+$bs-purple: $purple-500; // var(--purple);
+$bs-pink: $pink-500; // var(--pink);
+$bs-red: $red-500; // var(--red);
+$bs-orange: $orange-500; // var(--orange);
+$bs-yellow: $yellow-500; // var(--yellow);
+$bs-green: $green-500; // var(--green);
+$bs-teal: $teal-500; // var(--teal);
+$bs-cyan: $cyan-500; // var(--cyan);
+
+$bs-white: $gray-100; // var(--white);
+$bs-gray: $gray-500; // var(--gray);
+$bs-gray-dark: $gray-800; // var(--gray-dark);
+
+$bs-primary: $primary; // var(--primary);
+$bs-secondary: $secondary; // var(--secondary);
+$bs-success: $success; // var(--success);
+$bs-info: $info; // var(--info);
+$bs-warning: $warning; // var(--warning);
+$bs-danger: $danger; // var(--danger);
+$bs-light: $light; // var(--light);
+$bs-dark: $dark; // var(--dark);
+
+$bs-breakpoint-xs: 0;
+$bs-breakpoint-sm: 576px;
+$bs-breakpoint-md: 768px;
+$bs-breakpoint-lg: 992px;
+$bs-breakpoint-xl: 1200px;
+$bs-font-family-sans-serif: var(--font-family-sans-serif);
+$bs-font-family-monospace: var(--font-family-monospace);
+
+$bs-gray-100: #f8f9fa !default;
+$bs-gray-200: #e9ecef !default;
+$bs-gray-300: #dee2e6 !default;
+$bs-gray-400: #ced4da !default;
+$bs-gray-500: #adb5bd !default;
+$bs-gray-600: #6c757d !default;
+$bs-gray-700: #495057 !default;
+$bs-gray-800: #343a40 !default;
+$bs-gray-900: #212529 !default;
+
+$bs-muted: $bs-gray-600;
+
+// Based on Material Design
+
+$dark-neutral: #121212;
+
+$dark-dp-1: lighten($dark-neutral, 5);
+$dark-dp-2: lighten($dark-neutral, 7);
+$dark-dp-3: lighten($dark-neutral, 8);
+$dark-dp-4: lighten($dark-neutral, 9);
+$dark-dp-6: lighten($dark-neutral, 11);
+$dark-dp-8: lighten($dark-neutral, 12);
+$dark-dp-12: lighten($dark-neutral, 14);
+$dark-dp-16: lighten($dark-neutral, 15);
+$dark-dp-24: lighten($dark-neutral, 16);
+
+$dark-disabled: rgba(255, 255, 255, 0.38);
+$dark-low-emphasis: rgba(255, 255, 255, 0.6);
+$dark-high-emphasis: rgba(255, 255, 255, 0.87);
+
+// Extension-styled
+
+$dark-ext-level-1: #222;
+$dark-ext-level-2: #2a2a2a;
+$dark-ext-level-3: #333;
+
+$light-ext-level-1: white;
+$light-ext-level-2: #fcfcfc;
+$light-ext-level-3: #ebebeb;
